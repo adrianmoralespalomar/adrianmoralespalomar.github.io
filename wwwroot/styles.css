@@ -1,0 +1,381 @@
+/*GENERAL*/
+/*ScrollBar*/
+::-webkit-scrollbar {
+    width: 10px !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #a8d7ffbd;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+body, html {
+    height: 100%;
+  }
+body{
+    background-color: #07073b;
+    color: #a8d7ffbd;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.container{
+    max-width: 1450px;
+}
+.container,.container-fluid{
+    margin-top: 130px;
+    margin-bottom: 130px;
+    background-color: #012c44;
+}
+a:hover{
+    text-decoration: none !important;
+}
+h2,h3,h4,h5,h6{
+    display: block;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
+}
+h4{
+    font-size: 32px;
+}
+h5{
+    font-size: 25px;
+}
+h6{
+    font-size: 20px;
+}
+.font-weight-bold{
+    color:#f1f1f1;
+}
+.bg-transparent{
+    background-color: transparent;
+}
+/*BACKGROUND FOR EACH SECTION*/
+div.backgroundImage img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    opacity: 0.7;
+}
+/*PARALLAX BACKGROUND*/
+.parallaxBackground{
+    background-image: url("images/backgroundImage2Dark.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*SECTION HEADER TEXT*/
+.sectionHeader h3{
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color:#f77d00;
+    text-shadow: #cc0000 0px 0px 30px;
+}
+/*SCROLL UP BUTTON*/
+.scrollUpButton {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 35px;
+    border-radius: 50%;
+    color: #f1f1f1;
+    -webkit-box-shadow: inset 0px 0px 0px 5px rgba(127,161,204,1);
+    -moz-box-shadow: inset 0px 0px 0px 5px rgba(127,161,204,1);
+    box-shadow: inset 0px 0px 0px 5px rgba(127,161,204,1);
+    transition: color all .3s;
+}
+.scrollUpButton:hover {
+    color: #8c8c8d;
+}
+
+/*HEADER*/
+header nav{
+    background-color:#000000d9;
+}
+header nav .langColorContainer{
+    right: 10px;
+}
+header nav ul li{
+    margin:0px 10px;
+}
+header nav .langColorContainer i,header nav ul li .nav-link{
+    font-size: 20px;
+    color:#8c8c8d;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .3s;
+}
+header nav .langColorContainer i:hover,header nav ul li .nav-link:hover{
+    color:#c7c7c7;
+}
+header nav ul li .nav-link.active{
+    color:#f1f1f1;
+}
+header nav .langColorContainer i{
+    vertical-align: bottom;
+}
+header nav .langColorContainer i ul li{
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    background-color: #101827;
+    color:#f1f1f1;
+    border-color: #475d77;
+    border-width:0px 2px 2px 2px;;
+    border-style: solid;
+    transition: all .3s;
+}
+header nav .langColorContainer i ul li:first-child{
+    border-radius: 10px 10px 0px 0px;
+    border-top-width:2px;
+}
+header nav .langColorContainer i ul li:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+header nav .langColorContainer i ul li:hover{
+    background-color: #26395e;
+}
+header nav .langColorContainer i ul.anime-menu{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 150px;
+    padding-left: 0px;
+    transform: translateY(-3em);
+    z-index: -1;
+    transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+header nav .langColorContainer i.fas.fa-adjust ul.anime-menu{
+    right: 0px;
+}
+header nav .langColorContainer i:hover ul.anime-menu,
+header nav .langColorContainer i:focus-visible ul.anime-menu,
+header nav .langColorContainer i:focus ul.anime-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+    transition-delay: 0s,0s,0.3s;
+}
+
+
+/*WELCOME MESSAGE SECTION*/
+.greetingsContainer .welcomeMessage div.cardPresentation{
+    background-color: transparent;
+    width: 275px;
+    height: 365px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.greetingsContainer .welcomeMessage div.cardPresentation:hover div.innerCardPresentation{
+    transform: rotateY(180deg);
+}
+.greetingsContainer div.cardPresentation div.innerCardPresentation div.frontCardPresentation,.greetingsContainer div.cardPresentation div.innerCardPresentation div.backCardPresentation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    border-radius: 30px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.frontCardPresentation img.imageProfile{
+    width: 275px;
+}
+.greetingsContainer div.cardPresentation div.innerCardPresentation div.backCardPresentation{
+    background: linear-gradient(to bottom, #07073b,#02021b);
+    color: #708eb3;
+    text-align: left;
+    transform: rotateY(180deg);
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation .imageBackCardPresentation{
+    position: relative;
+    display: inline-block;
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation .imageBackCardPresentation:after {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, #ff000000,#07073b); /* W3C */
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation .imageBackCardPresentation img.imageProfile{
+    height: 269px;
+    width: 100%;
+    margin-top: -25px;
+    margin-bottom: -100px;
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation div.personalInfoBackCardPresentation{
+    padding: 25px 15px;
+    font-size: 17px;
+    height: 100%;
+    display: block;
+    position: relative;
+    z-index: 99999999;
+    background: linear-gradient(to bottom, #07073b,#02021b);
+}
+.greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation div.personalInfoBackCardPresentation h6{
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+}
+.greetingsContainer .welcomeMessage span.passionWord{
+    color: #f77d00;
+    text-shadow: #cc0000 0px 0px 30px;
+    border-right: 2px solid #a8d7ffbd;
+}
+
+/*CAROUSEL PROJECTS*/
+.carouselProjectsContainer {
+    padding-bottom: 162px;
+}
+.carouselProjectsContainer .embla {
+    overflow: hidden;
+}
+.carouselProjectsContainer .embla__container {
+    display: flex;
+}
+.carouselProjectsContainer .embla__slide {
+    position: relative;
+    min-width: 33%;
+}
+.carouselProjectsContainer img{
+    width: 500px;
+    height: 250px;
+}
+
+/*EXPERIENCE*/
+.experienceContainer{
+    padding-bottom: 96px;
+}
+.experienceContainer div.backgroundImage img {
+    height: 715px;
+    transform: scaleX(-1);
+    opacity: 0.3;
+}
+.experienceContainer div.experienceSection {
+    padding-top:30px;
+    padding-bottom:30px;
+    border-bottom: 2px solid #a8d7ffbd;
+}
+.experienceContainer div.roundedBackgroundImageLogoExperience {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    width: 75px;
+    height: 75px;
+}
+.experienceContainer div.roundedBackgroundImageLogoExperience img{
+    display: block;
+    height: 85%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+.experienceContainer div:not(.sectionHeader) h5 {
+    color: #f77d00;
+}
+.experienceContainer div:not(.sectionHeader) h6 {
+    color: #a8d7ffbd;
+}
+.experienceContainer .cognodataExperience div.roundedBackgroundImageLogoExperience img{
+    height: 25%;
+    margin-top: 40%;
+}
+
+/*KNOWLEDGE SECTION*/
+.knowledgeContainer{
+    padding-bottom: 83px;
+}
+.knowledgeContainer div.backgroundImage img {
+    filter: hue-rotate(150deg);
+    opacity: 0.5;
+}
+.knowledgeContainer .knowledgeSection{
+    margin:1rem 0px;
+}
+.knowledgeContainer .knowledgeSection img{
+    width: 50px;
+    height: 50px;
+    transition: transform .3s;
+}
+.knowledgeContainer .knowledgeSection img:hover {
+    transform: scale(1.2);
+}
+
+/*CONTACT SECTION*/
+.contactContainer{
+    padding-bottom: 80px;
+}
+.contactContainer div.backgroundImage img {
+    height: 300px;
+    transform: scaleX(-1);
+    opacity: 0.4;
+    object-fit: cover;
+}
+.contactContainer div.contactSection {
+    color: #f1f1f1;
+}
+.contactContainer div.contactSection a,.contactContainer div.contactSection a *{
+    color: #f1f1f1;
+    transition: all 0.3s;
+}
+.contactContainer div.contactSection a i{
+    font-size: 40px;
+    background-color: #012c4457;
+    border-radius: 50%;
+    padding: 20px;
+    border: 2px solid #83accd;
+    margin-bottom: 10px;
+}
+.contactContainer div.contactSection a i:hover{
+    background-color: #011622de;
+    color: #c1c1c1;
+}
+.contactContainer div.contactSection a h5:hover{
+    color: #c1c1c1;
+}
+
+/*FOOTER*/
+.footer,.footer div,.footer a {
+    color:#e4e4e4;
+    background-color: #0e0e0e;
+}
+.footer a:hover{
+    color: #c1c1c1;
+}
+.footer i{
+    font-size: 30px;
+    margin: 0px 10px;
+}
+.footer h6{
+    font-size: 17px;
+    margin: 20px 0px 0px;
+    color: #717171;
+}
