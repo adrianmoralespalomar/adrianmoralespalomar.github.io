@@ -32,6 +32,10 @@ function changeLanguage(newLanguage){
                     passionPhrases=languageContent.content[key];
                     let phrasePassionSpan = document.getElementById("passionWord");
                     document.getElementById("passionWord").textContent=passionPhrases[0];
+                    currentPassionPhrase=0;
+                    initialValueIndexLoopWritePassionPhrase=0;
+                    writtingPassionPhrase=false;
+                    if(timeOut!=null)clearTimeout(timeOut);
                     executeWritePassionPhrases(phrasePassionSpan);
                 }
                 else{
@@ -57,16 +61,17 @@ function scrolltoplace(idElement) {
  * Function to control the writePassionPhrases Function
  * @param {*} elementWhereWrite HTML Element to write the differente Passion Phrases
  */
+var timeOut;
 function executeWritePassionPhrases(elementWhereWrite){
     let delayWritting=50;
     if((elementWhereWrite.textContent.length>0 && !writtingPassionPhrase) || (writtingPassionPhrase && elementWhereWrite.textContent !=passionPhrases[currentPassionPhrase])){
-        setTimeout(function() {
+        timeOut=setTimeout(function() {
             writePassionPhrases(elementWhereWrite)
             executeWritePassionPhrases(elementWhereWrite)
         }, delayWritting)
     }
     else{
-        setTimeout(function() {
+        timeOut=setTimeout(function() {
             currentPassionPhrase=currentPassionPhrase+1<passionPhrases.length?currentPassionPhrase+1:0;
             initialValueIndexLoopWritePassionPhrase=0;
             writtingPassionPhrase=!writtingPassionPhrase;
