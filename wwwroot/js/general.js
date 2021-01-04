@@ -7,8 +7,9 @@ $(document).ready(function () {
     var language = getCookie("language");
     if(language.length<=0){
         language="EN";
-        changeLanguage(language);
+        changeCookieLanguage(newLanguage);
     }
+    changeLanguage(language);
     toggleVisibilityScrollTopButton();
     window.onscroll = function () {
         toggleVisibilityScrollTopButton();
