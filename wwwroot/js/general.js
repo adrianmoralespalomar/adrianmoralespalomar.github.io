@@ -14,8 +14,6 @@ $(document).ready(function () {
     window.onscroll = function () {
         toggleVisibilityScrollTopButton();
     };
-    let phrasePassionSpan = document.getElementById("passionWord");
-    executeWritePassionPhrases(phrasePassionSpan);
 });
 
 /*GENERAL*/
