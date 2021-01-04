@@ -20,8 +20,6 @@ $(document).ready(function () {
 
 /*GENERAL*/
 function changeLanguage(newLanguage){
-    //To Avoid Overloads
-    if(newLanguage!=getCookie("language")){
         changeCookieLanguage(newLanguage);
         let contenPage = ["header","greetings","projects","experience","knowledge","contact","footer"];
         contenPage.forEach(element => {
@@ -44,7 +42,6 @@ function changeLanguage(newLanguage){
                 }
             }
         });
-    }
 }
 
 /**
