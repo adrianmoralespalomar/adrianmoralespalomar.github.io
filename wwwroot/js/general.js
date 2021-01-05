@@ -14,32 +14,44 @@ $(document).ready(function () {
     window.onscroll = function () {
         toggleVisibilityScrollTopButton();
     };
+    let phrasePassionSpan = document.getElementById("passionWord");
+    executeWritePassionPhrases(phrasePassionSpan);
+    
+    /*TO CONTROL COLLAPSE BUTTON MOBILE SIZES*/
+    $(document).click(function (event) {
+        var click = $(event.target);
+        var _open = $(".navbar-collapse").hasClass("show");
+        if (_open === true && !click.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
+        }
+    });
 });
 
 /*GENERAL*/
 function changeLanguage(newLanguage){
-        changeCookieLanguage(newLanguage);
-        let contenPage = ["header","greetings","projects","experience","knowledge","contact","footer"];
-        contenPage.forEach(element => {
-            //window["stringOfTheVariable"] == this["stringOfTheVariable"]
-            var languageContent=JSON.parse(window[element]).filter(function (param){return param.language==newLanguage;})[0];
-            for (var key in languageContent.content) {
-                //To Restar passion Phrases Animation
-                if(element=="greetings" && key=="passionWord"){
-                    passionPhrases=languageContent.content[key];
-                    let phrasePassionSpan = document.getElementById("passionWord");
-                    document.getElementById("passionWord").textContent=passionPhrases[0];
-                    currentPassionPhrase=0;
-                    initialValueIndexLoopWritePassionPhrase=0;
-                    writtingPassionPhrase=false;
-                    if(timeOut!=null)clearTimeout(timeOut);
-                    executeWritePassionPhrases(phrasePassionSpan);
-                }
-                else{
-                    if(document.getElementById(key)!=null) document.getElementById(key).textContent=languageContent.content[key];
-                }
+    changeCookieLanguage(newLanguage);
+    let contenPage = ["header","greetings","projects","experience","knowledge","contact","footer"];
+    contenPage.forEach(element => {
+        //window["stringOfTheVariable"] == this["stringOfTheVariable"]
+        var languageContent=JSON.parse(window[element]).filter(function (param){return param.language==newLanguage;})[0];
+        for (var key in languageContent.content) {
+            //To Restar passion Phrases Animation
+            if(element=="greetings" && key=="passionWord"){
+                passionPhrases=languageContent.content[key];
+                let phrasePassionSpan = document.getElementById("passionWord");
+                document.getElementById("passionWord").textContent=passionPhrases[0];
+                currentPassionPhrase=0;
+                initialValueIndexLoopWritePassionPhrase=0;
+                writtingPassionPhrase=false;
+                if(timeOut!=null)clearTimeout(timeOut);
+                executeWritePassionPhrases(phrasePassionSpan);
             }
-        });
+            else{
+                if(document.getElementById(key)!=null) document.getElementById(key).textContent=languageContent.content[key];
+            }
+        }
+    });
+    
 }
 
 /**
