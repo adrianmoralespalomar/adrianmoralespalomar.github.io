@@ -104,7 +104,7 @@ div.backgroundImage img{
 header nav{
     background-color:#000000d9;
 }
-header nav img.logoAMP{
+header nav .logoAMP img{
     width: 100px;
 }
 header nav .langColorContainer{
