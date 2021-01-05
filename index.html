@@ -2,25 +2,26 @@
 <html>
 <head>
     <title>Adrian Morales</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="icon" href="wwwroot/images/favicon.ico" type="image/x-icon"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/617cba19b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="wwwroot/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya:regular,italic,500,500italic,700,700italic,800,800italic,900,900italic%7CAlegreya+Sans:300,300italic,regular,italic,500,500italic,700,700italic%7CNunito+Sans:regular,600,700,900" media="all">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/617cba19b3.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="parallaxBackground">
 <header>
-    <nav class="navbar navbar-expand-md fixed-top">
-        <a class="navbar-brand position-absolute d-block" onclick="scrolltoplace('html')">AMP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand position-absolute d-block logoAMP" onclick="scrolltoplace('html')"><img src="wwwroot/images/logoAMP.png" class="img-fluid "></a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse text-right" id="navbarCollapse">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item active">
                 <span class="nav-link" onclick="scrolltoplace('html')" id="homeMsg">Home</span>
@@ -101,10 +102,10 @@
         <div class="col-12 backgroundImage">
             <img src="wwwroot/images/backgroundImage1.jpg" class="img-fluid">
         </div>
-        <div class="col-10 mt-3 sectionHeader">
+        <div class="col-12 col-md-10 mt-3 sectionHeader">
             <h3 id="projectTitleSectionHeader">My Projects</h3>
         </div>
-        <div class="col-10 text-center">
+        <div class="col-12 col-md-10 text-center carouselProjects">
             <div class="embla" id="embla">
                 <div class="embla__viewport">
                     <div class="embla__container">
@@ -162,18 +163,18 @@
         <div class="col-12 backgroundImage">
             <img src="wwwroot/images/backgroundImage3.jpg" class="img-fluid">
         </div>
-        <div class="col-10 mt-3 sectionHeader">
+        <div class="col-12 col-md-10 mt-3 sectionHeader">
             <h3 id="experienceTitleSectionHeader">My Experience</h3>
         </div>
 
-        <div class="col-9 experienceSection">
+        <div class="col-11 col-md-9 experienceSection">
             <div class="row">
-                <div class="col-1 pr-0">
+                <div class="col-3 col-md-1 pr-0">
                     <div class="roundedBackgroundImageLogoExperience">
                         <img src="wwwroot/images/experienceImage1.png" class="img-fluid" alt="BPR Logo">
                     </div>
                 </div>
-                <div class="col-11">
+                <div class="col-9 col-md-11">
                     <h4 class="font-weight-bold">BPR Business Process Reengineering</h4>
                     <h5 class="font-weight-bold"><i class="fas fa-briefcase mr-2"></i><span id="BPRJobDescription">Full-stack Developer and Technical Assistant</span></h5>
                     <h6><i class="far fa-clock mr-2"></i><span id="BPRJobTime">Oct 2019 - Present</span></h6>
@@ -181,14 +182,14 @@
             </div>
         </div>
 
-        <div class="col-9 experienceSection">
+        <div class="col-11 col-md-9 experienceSection">
             <div class="row">
-                <div class="col-1 pr-0 cognodataExperience">
+                <div class="col-3 col-md-1 pr-0 cognodataExperience">
                     <div class="roundedBackgroundImageLogoExperience">
                         <img src="wwwroot/images/experienceImage2.png" class="img-fluid" alt="Cognodata Logo">
                     </div>
                 </div>
-                <div class="col-11">
+                <div class="col-9 col-md-11">
                     <h4 class="font-weight-bold">Cognodata Consulting</h4>
                     <h5 class="font-weight-bold"><i class="fas fa-briefcase mr-2"></i><span id="cognodataJobDescription">Full-stack Developer</span></h5>
                     <h6><i class="far fa-clock mr-2"></i><span id="cognodataJobTime">Mar 2019 - Jun 2019</span></h6>
@@ -196,14 +197,14 @@
             </div>
         </div>
 
-        <div class="col-9 experienceSection">
+        <div class="col-11 col-md-9 experienceSection">
             <div class="row">
-                <div class="col-1 pr-0">
+                <div class="col-3 col-md-1 pr-0">
                     <div class="roundedBackgroundImageLogoExperience">
                         <img src="wwwroot/images/experienceImage3.png" class="img-fluid" alt="ElYetiRojo Logo">
                     </div>
                 </div>
-                <div class="col-11">
+                <div class="col-9 col-md-11">
                     <h4 class="font-weight-bold">El Yeti Rojo</h4>
                     <h5 class="font-weight-bold"><i class="fas fa-briefcase mr-2"></i><span id="yetirojoJobDescription">Front-End Developer and Designer</span></h5>
                     <h6><i class="far fa-clock mr-2"></i><span id="yetirojoJobTime">Jun 2015 - Sept 2015</span></h6>
@@ -219,105 +220,105 @@
         <div class="col-12 backgroundImage">
             <img src="wwwroot/images/backgroundImage4.jpg" class="img-fluid">
         </div>
-        <div class="col-10 mt-3 sectionHeader">
+        <div class="col-12 col-md-10 mt-3 sectionHeader">
             <h3 id="knowledgeTitleSectionHeader">My knowledge</h3>
         </div>
 
-        <div class="col-9 text-center">
+        <div class="col-12 col-md-9 text-center">
             <div class="row">
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage1.png" alt="C#" title="C#" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage3.png" alt=".Net Core" title=".Net Core" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage4.png" alt=".Net Framework" title=".Net Framework" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage5.png" alt="Java" title="Java" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage6.png" alt="Spring" title="Spring" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage7.png" alt="Python" title="Python" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage2.png" alt="Visual Basic" title="Visual Basic" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage8.png" alt="Angular" title="Angular" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage9.png" alt="Node JS" title="Node JS" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage10.png" alt="TypeScript" title="TypeScript" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage11.png" alt="JavaScript" title="JavaScript" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage12.png" alt="JQuery" title="JQuery" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage13.png" alt="HTML" title="HTML" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage14.png" alt="CSS" title="CSS" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage15.png" alt="Bootstrap" title="Bootstrap" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage16.png" alt="SQL Server" title="SQL Server" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage17.png" alt="MySQL" title="MySQL" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage18.png" alt="Azure Service" title="Azure Service" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage19.png" alt="Git - GitHub" title="Git - GitHub" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage20.png" alt="Power BI" title="Power BI" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage21.png" alt="Excel" title="Excel" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage22.png" alt="Word" title="Word" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage23.png" alt="Adobe PhotoShop" title="Adobe PhotoShop" class="img-fluid">
                 </div>
 
-                <div class="col-2 knowledgeSection">
+                <div class="col-3 col-md-2 knowledgeSection">
                     <img src="wwwroot/images/knowledgeImage24.png" alt="Sony Vegas" title="Sony Vegas" class="img-fluid">
                 </div>
             </div>
@@ -331,28 +332,28 @@
         <div class="col-12 backgroundImage">
             <img src="wwwroot/images/backgroundImage5.jpg" class="img-fluid">
         </div>
-        <div class="col-10 mt-3 sectionHeader">
+        <div class="col-12 col-md-10 mt-3 sectionHeader">
             <h3 id="contactTitleSectionHeader">Contact Me</h3>
         </div>
 
-        <div class="col-9 text-center">
+        <div class="col-12 col-md-9 text-center">
             <div class="row">
                 <div class="col-4 contactSection">
-                    <a href="tel:+34650897172" rel="nofollow">
+                    <a class="phoneLink" href="tel:+34650897172" rel="nofollow">
                         <i class="fas fa-phone"></i>
                         <h5>+34 650897172</h5>
                     </a>
                 </div>
         
-                <div class="col-4 contactSection">
-                    <a href="mailto:adrianmoralespalomar@gmail.com" rel="nofollow">
+                <div class="col-4 px-0 px-md-3 contactSection">
+                    <a class="emailLink" href="mailto:adrianmoralespalomar@gmail.com" rel="nofollow">
                         <i class="fas fa-envelope"></i>
-                        <h5>adrianmoralespalomar@gmail.com</h5>
+                        <h5>adrianmoralespalomar<br class="d-block d-md-none">@gmail.com</h5>
                     </a>
                 </div>
         
                 <div class="col-4 contactSection">
-                    <a href="https://www.linkedin.com/in/adrian-morales-palomar-118960186/" rel="nofollow" target="_blank">
+                    <a class="linkedinLink" href="https://www.linkedin.com/in/adrian-morales-palomar-118960186/" rel="nofollow" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                         <h5>Linkedin</h5>
                     </a>
@@ -365,7 +366,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-center py-3">
-            <div class="col-5">
+            <div class="col-8 col-md-5">
                 <h5>Adrian Morales Palomar</h5>
                 <h6>@Copyright 2021 | Adrian Morales Palomar</h6>
             </div>
