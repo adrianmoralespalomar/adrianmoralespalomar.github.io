@@ -13,19 +13,20 @@
 }
 body, html {
     height: 100%;
-  }
+}
 body{
     background-color: #07073b;
-    color: #a8d7ffbd;
+    color: #a8d7ffbd !important;
     font-family: 'Alegreya Sans', sans-serif;
 }
-.container{
-    max-width: 1450px;
-}
+@media (min-width:1400px) {.container{max-width: 1450px;}}
 .container,.container-fluid{
     margin-top: 130px;
     margin-bottom: 130px;
     background-color: #012c44;
+}
+button:focus{
+    outline: none !important;
 }
 a:hover{
     text-decoration: none !important;
@@ -34,19 +35,19 @@ h2,h3,h4,h5,h6{
     display: block;
 }
 h2{
-    font-size: 50px;
+    font-size: 50px !important;
 }
 h3{
-    font-size: 40px;
+    font-size: 40px !important;
 }
 h4{
-    font-size: 32px;
+    font-size: 32px !important;
 }
 h5{
-    font-size: 25px;
+    font-size: 25px !important;
 }
 h6{
-    font-size: 20px;
+    font-size: 20px !important;
 }
 .font-weight-bold{
     color:#f1f1f1;
@@ -60,7 +61,7 @@ div.backgroundImage img{
     left: 0;
     top: 0;
     width: 100%;
-    height: 500px;
+    height: 530px;
     opacity: 0.7;
 }
 /*PARALLAX BACKGROUND*/
@@ -102,6 +103,9 @@ div.backgroundImage img{
 /*HEADER*/
 header nav{
     background-color:#000000d9;
+}
+header nav img.logoAMP{
+    width: 100px;
 }
 header nav .langColorContainer{
     right: 10px;
@@ -254,13 +258,16 @@ header nav .langColorContainer i:focus ul.anime-menu{
 .carouselProjectsContainer {
     padding-bottom: 162px;
 }
-.carouselProjectsContainer .embla {
+.carouselProjectsContainer .carouselProjects{
+    padding-top: 30px;
+}
+.carouselProjectsContainer .carouselProjects .embla {
     overflow: hidden;
 }
-.carouselProjectsContainer .embla__container {
+.carouselProjectsContainer .carouselProjects .embla__container {
     display: flex;
 }
-.carouselProjectsContainer .embla__slide {
+.carouselProjectsContainer .carouselProjects .embla__slide {
     position: relative;
     min-width: 33%;
 }
@@ -379,3 +386,108 @@ header nav .langColorContainer i:focus ul.anime-menu{
     margin: 20px 0px 0px;
     color: #717171;
 }
+
+
+/*MEDIA QUERIES*/
+/*LG*/
+@media (max-width:1400px) {}
+/*MD*/
+@media (max-width:991.99px) {}
+/*SM*/
+@media (max-width:813px) {
+    /*GENERAL*/
+    .container,.container-fluid{
+        margin-top:75px;
+        margin-bottom: 75px;
+    }
+    h2{
+        font-size: 30px !important;
+    }
+    h3{
+        font-size: 25px !important;
+    }
+    h4{
+        font-size: 19px !important;
+    }
+    h5{
+        font-size: 18px !important;
+    }
+    h6{
+        font-size: 16px !important;
+    }
+
+    /*HEADER*/
+    header nav .logoAMP{
+        top: 3px;
+    }
+    header nav .logoAMP img{
+        width: 75px;
+    }
+    header nav .langColorContainer {
+        right: 55px;
+        top: 13px;
+    }
+    header nav button.navbar-toggler {
+        border-radius: 50%;
+        padding: .25rem;
+        border-color: rgb(140,140,141);
+    } 
+    header nav button.navbar-toggler .navbar-toggler-icon {
+        width: 1.25em;
+        height: 1.25em;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(140,140,141, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    /*WELCOME MESSAGE SECTION*/
+    .carouselProjectsContainer div.backgroundImage img{
+        transform: scale(1.5);
+        padding-top: 65px;
+        height: 390px;
+        left: -25px;
+        width: 85%;
+    }
+
+    /*EXPERIENCE*/
+    .experienceContainer{
+        padding-bottom: 25px;
+    }
+    .experienceContainer div.backgroundImage img {
+        height: 600px;
+    }
+
+    /*KNOWLEDGE*/
+    .knowledgeContainer {
+        padding-bottom: 0px;
+    }
+    .knowledgeContainer div.backgroundImage img {
+        height: 618px;
+    }
+    .knowledgeContainer .knowledgeSection img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*CONTACT*/
+    .contactContainer {
+        padding-bottom: 15px;
+    }
+    .contactContainer div.backgroundImage img {
+        height: 218px;
+    }
+    .contactContainer div.contactSection a, .contactContainer div.contactSection a h5 {
+        font-size: 15px !important;
+    }
+    .contactContainer div.contactSection a.emailLink h5 {
+        margin-left: -15px;
+    }
+
+    /*FOOTER*/
+    .footer i {
+        margin: 0px 5px;
+    }
+    
+}
+/*XS*/
+@media (max-width: 575.98px) {}
+/*LANDSCAPE*/
+@media screen and (orientation:landscape)and (max-device-height: 415px) {}
