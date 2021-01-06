@@ -61,7 +61,7 @@ div.backgroundImage img{
     left: 0;
     top: 0;
     width: 100%;
-    height: 500px;
+    height: 530px;
     opacity: 0.7;
 }
 /*PARALLAX BACKGROUND*/
@@ -281,7 +281,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
     padding-bottom: 96px;
 }
 .experienceContainer div.backgroundImage img {
-    height: 715px;
+    height: 718px;
     transform: scaleX(-1);
     opacity: 0.3;
 }
@@ -323,6 +323,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
 .knowledgeContainer div.backgroundImage img {
     filter: hue-rotate(150deg);
     opacity: 0.5;
+    height: 500px;
 }
 .knowledgeContainer .knowledgeSection{
     margin:1rem 0px;
@@ -477,10 +478,10 @@ header nav .langColorContainer i:focus ul.anime-menu{
     .contactContainer div.contactSection a, .contactContainer div.contactSection a h5 {
         font-size: 15px !important;
     }
-    .contactContainer div.contactSection a.emailLink h5 {
-        margin-left: -15px;
+    .contactContainer div.contactSection a i{
+        font-size: 30px;
     }
-
+    
     /*FOOTER*/
     .footer i {
         margin: 0px 5px;
