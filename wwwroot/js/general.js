@@ -14,8 +14,8 @@ $(document).ready(function () {
     window.onscroll = function () {
         toggleVisibilityScrollTopButton();
     };
-    let phrasePassionSpan = document.getElementById("passionWord");
-    executeWritePassionPhrases(phrasePassionSpan);
+    //let phrasePassionSpan = document.getElementById("passionWord");
+    //executeWritePassionPhrases(phrasePassionSpan);
     
     /*TO CONTROL COLLAPSE BUTTON MOBILE SIZES*/
     $(document).click(function (event) {
@@ -76,7 +76,7 @@ function executeWritePassionPhrases(elementWhereWrite){
         timeOut=setTimeout(function() {
             writePassionPhrases(elementWhereWrite)
             executeWritePassionPhrases(elementWhereWrite)
-        }, delayWritting)
+        }, delayWritting);
     }
     else{
         timeOut=setTimeout(function() {
