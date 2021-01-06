@@ -236,7 +236,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
     margin-bottom: -100px;
 }
 .greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation div.personalInfoBackCardPresentation{
-    padding: 25px 15px;
+    padding: 5px 15px;
     font-size: 17px;
     height: 100%;
     display: block;
@@ -245,7 +245,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
     background: linear-gradient(to bottom, #07073b,#02021b);
 }
 .greetingsContainer .welcomeMessage div.cardPresentation div.innerCardPresentation div.backCardPresentation div.personalInfoBackCardPresentation h6{
-    font-size: 18px;
+    font-size: 18px !important;
     margin-bottom: 0.8rem;
 }
 .greetingsContainer .welcomeMessage span.passionWord{
