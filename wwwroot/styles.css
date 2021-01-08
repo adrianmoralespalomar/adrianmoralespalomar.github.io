@@ -416,6 +416,10 @@ header nav .langColorContainer i:focus ul.anime-menu{
     h6{
         font-size: 16px !important;
     }
+    /*SCROLL UP BUTTON*/
+    .scrollUpButton{
+        bottom: 95px;
+    }
 
     /*HEADER*/
     header nav .logoAMP{
@@ -443,7 +447,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
     .carouselProjectsContainer div.backgroundImage img{
         transform: scale(1.5);
         padding-top: 65px;
-        height: 390px;
+        height: 410px;
         left: -25px;
         width: 85%;
     }
@@ -453,7 +457,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
         padding-bottom: 25px;
     }
     .experienceContainer div.backgroundImage img {
-        height: 600px;
+        height: 603px;
     }
 
     /*KNOWLEDGE*/
@@ -461,7 +465,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
         padding-bottom: 0px;
     }
     .knowledgeContainer div.backgroundImage img {
-        height: 618px;
+        height: 622px;
     }
     .knowledgeContainer .knowledgeSection img {
         width: 60px;
@@ -481,7 +485,7 @@ header nav .langColorContainer i:focus ul.anime-menu{
     .contactContainer div.contactSection a i{
         font-size: 30px;
     }
-    
+
     /*FOOTER*/
     .footer i {
         margin: 0px 5px;
